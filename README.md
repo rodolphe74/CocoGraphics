@@ -1,2 +1,2 @@
 # CocoGraphics
-Graphic experimentation on Tandy Coco 3
+Graphic experimentations on Tandy Coco 3
