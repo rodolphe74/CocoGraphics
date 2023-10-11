@@ -17,4 +17,3 @@ How to display an image on a COCO3 (at least on XRoar, not tested on a real one)
 
 ## 640x200 (en 4 couleurs)
 <img src="samples/xross.png">
-<img src="samples/xrbn.png">
