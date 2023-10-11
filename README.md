@@ -6,12 +6,9 @@ How to display an image on a COCO3 (at least on XRoar, not tested on a real one)
 ...
 
 # Links
-[dqdsq](https://subethasoftware.com/2020/04/19/understanding-and-using-the-coco-3-mmu/)
-
-https://www.chibiakumas.com/6809/platform.php#LessonP9
-
-http://perso.b2b2c.ca/~sarrazip/dev/cmoc.html
-
-https://github.com/exoticorn/exoquant
+- [Understaning COCO 3 MMU](https://subethasoftware.com/2020/04/19/understanding-and-using-the-coco-3-mmu/)
+- [How to display an sprite on a COCO](https://www.chibiakumas.com/6809/platform.php#LessonP9)
+- [CMOC 6809 C compiler]http://perso.b2b2c.ca/~sarrazip/dev/cmoc.html
+- [High quality dithering and quantizing library]https://github.com/exoticorn/exoquant
 
 # Samples
