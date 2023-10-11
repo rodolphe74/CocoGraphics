@@ -3,7 +3,8 @@ Graphic experimentations on Tandy Coco 3
 
 # Howto
 How to display an image on a COCO3 (at least on XRoar, not tested on a real one).
-...
+
+... [TODO] ...
 
 # Links
 - [Understaning COCO 3 MMU](https://subethasoftware.com/2020/04/19/understanding-and-using-the-coco-3-mmu/)
