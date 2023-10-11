@@ -12,3 +12,6 @@ How to display an image on a COCO3 (at least on XRoar, not tested on a real one)
 - [High quality quantizing and dithering library](https://github.com/exoticorn/exoquant)
 
 # Samples
+<img src="samples/xrbadm.png">
+<img src="samples/xross.png">
+<img src="samples/xrbn.png">
