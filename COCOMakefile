@@ -9,7 +9,7 @@ CP=cp
 XROAR=xroar.exe -machine coco3 -tv-input rgb -kbd-translate -ram 128K
 
 
-# replaceAndRun target use following 2 vars
+# replaceAndRun target uses these 2 following vars
 # (use convert to convert an image to coc format before)
 IMAGE_PREFIX = bn
 IMAGE_CHUNKS = 4
