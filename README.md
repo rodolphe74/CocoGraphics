@@ -17,7 +17,7 @@ make
 ./convert [image_filename] 0
 ```
 
-- Then adapt makefile variables
+- Then adapt COCOMakefile variables
 ```
 IMAGE_PREFIX = [image_prefix]
 IMAGE_CHUNKS = [number of chunks (.co files), should be 4]
