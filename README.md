@@ -4,7 +4,15 @@ Graphic experimentations on Tandy Coco 3
 # Howto
 How to display an image on a COCO3 (at least on XRoar, not tested on a real one).
 
-- First convert an image to coco format with convert (2d argument is 0 for 320x200, 1 for 640*200)
+Requirements: gcc, awk, cmoc, xroar, imgtool
+
+- First, compile convert.c (tool to convert an image to coco format)
+```
+cmake .
+make
+```
+
+- Convert an image to coco format with convert (2d argument is 0 for 320x200, 1 for 640*200)
 ```
 ./convert [image_filename] 0
 ```
