@@ -57,26 +57,6 @@ floppy: pixel
 
 	### images copy ###
 	# $(IMGTOOL) put coco_jvc_rsdos floppy.dsk arton525.coc arton525.coc
-	$(IMGTOOL) put coco_jvc_rsdos floppy.dsk arton525.pal arton525.pal
-	$(IMGTOOL) put coco_jvc_rsdos floppy.dsk arton525.co0 arton525.co0
-	$(IMGTOOL) put coco_jvc_rsdos floppy.dsk arton525.co1 arton525.co1
-	$(IMGTOOL) put coco_jvc_rsdos floppy.dsk arton525.co2 arton525.co2
-	$(IMGTOOL) put coco_jvc_rsdos floppy.dsk arton525.co3 arton525.co3
-
-	# $(IMGTOOL) put coco_jvc_rsdos floppy.dsk badm.coc badm.coc
-	$(IMGTOOL) put coco_jvc_rsdos floppy.dsk badm.pal badm.pal
-	$(IMGTOOL) put coco_jvc_rsdos floppy.dsk badm.co0 badm.co0
-	$(IMGTOOL) put coco_jvc_rsdos floppy.dsk badm.co1 badm.co1
-	$(IMGTOOL) put coco_jvc_rsdos floppy.dsk badm.co2 badm.co2
-	$(IMGTOOL) put coco_jvc_rsdos floppy.dsk badm.co3 badm.co3
-
-	# $(IMGTOOL) put coco_jvc_rsdos floppy.dsk bn.coc bn.coc
-	$(IMGTOOL) put coco_jvc_rsdos floppy.dsk bn.pal bn.pal
-	$(IMGTOOL) put coco_jvc_rsdos floppy.dsk bn.co0 bn.co0
-	$(IMGTOOL) put coco_jvc_rsdos floppy.dsk bn.co1 bn.co1
-	$(IMGTOOL) put coco_jvc_rsdos floppy.dsk bn.co2 bn.co2
-	$(IMGTOOL) put coco_jvc_rsdos floppy.dsk bn.co3 bn.co3
-
 	# $(IMGTOOL) put coco_jvc_rsdos floppy.dsk oss.coc oss.coc
 	# $(IMGTOOL) put coco_jvc_rsdos floppy.dsk oss.pal oss.pal
 	# $(IMGTOOL) put coco_jvc_rsdos floppy.dsk oss.co0 oss.co0
@@ -107,4 +87,4 @@ format:
 	$(RM) *.orig
 
 clean:
-	$(RM) *.o *.a *.bin
+	$(RM) *.o *.a *.bin *.co*
