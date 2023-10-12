@@ -11,16 +11,18 @@ XROAR=xroar.exe -machine coco3 -tv-input rgb -kbd-translate -ram 128K
 
 # replaceAndRun target uses these 2 following vars
 # (use convert to convert an image to coc format before)
-IMAGE_PREFIX = bn
+IMAGE_PREFIX = arton5254
 IMAGE_CHUNKS = 4
 
 # do not modify
-IMAGE_FILENAME_LEN =  $(shell $(AWK) 'BEGIN{print length("$(IMAGE_PREFIX)")}')
-IMAGE_CHUNK_PREFIX_FILENAME_LOWER = $(shell printf %-8s%s $(IMAGE_PREFIX) CO)
+IMAGE_PREFIX_SUBST = $(shell $(AWK) 'BEGIN{print substr("$(IMAGE_PREFIX)", 0, 8)}')
+IMAGE_FILENAME_LEN =  $(shell $(AWK) 'BEGIN{print length("$(IMAGE_PREFIX_SUBST)")}')
+IMAGE_CHUNK_PREFIX_FILENAME_LOWER = $(shell printf %-8s%s $(IMAGE_PREFIX_SUBST) CO)
 IMAGE_CHUNK_PREFIX_FILENAME = $(shell $(AWK) 'BEGIN{print toupper("$(IMAGE_CHUNK_PREFIX_FILENAME_LOWER)")}')
-IMAGE_PAL_FILENAME_LOWER = $(shell printf %-8s%s $(IMAGE_PREFIX) PAL)
+IMAGE_PAL_FILENAME_LOWER = $(shell printf %-8s%s $(IMAGE_PREFIX_SUBST) PAL)
 IMAGE_PAL_FILENAME = $(shell $(AWK) 'BEGIN{print toupper("$(IMAGE_PAL_FILENAME_LOWER)")}')
 $(info $(IMAGE_PREFIX))
+$(info $(IMAGE_PREFIX_SUBST))
 $(info $(IMAGE_CHUNK_PREFIX_FILENAME))
 $(info $(IMAGE_PAL_FILENAME))
 
@@ -93,11 +95,11 @@ replaceAndRun:clean replaceAndCompile
 	$(IMGTOOL) put coco_jvc_rsdos floppy.dsk P.BAS P.BAS --ftype=basic --ascii=binary --filter=cocobas
 	$(IMGTOOL) put coco_jvc_rsdos floppy.dsk pixel.bin pixel.bin
 	### images copy ###
-	$(IMGTOOL) put coco_jvc_rsdos floppy.dsk $(IMAGE_PREFIX).pal $(IMAGE_PREFIX).pal
-	$(IMGTOOL) put coco_jvc_rsdos floppy.dsk $(IMAGE_PREFIX).co0 $(IMAGE_PREFIX).co0
-	$(IMGTOOL) put coco_jvc_rsdos floppy.dsk $(IMAGE_PREFIX).co1 $(IMAGE_PREFIX).co1
-	$(IMGTOOL) put coco_jvc_rsdos floppy.dsk $(IMAGE_PREFIX).co2 $(IMAGE_PREFIX).co2
-	$(IMGTOOL) put coco_jvc_rsdos floppy.dsk $(IMAGE_PREFIX).co3 $(IMAGE_PREFIX).co3
+	$(IMGTOOL) put coco_jvc_rsdos floppy.dsk $(IMAGE_PREFIX_SUBST).pal $(IMAGE_PREFIX_SUBST).pal
+	$(IMGTOOL) put coco_jvc_rsdos floppy.dsk $(IMAGE_PREFIX_SUBST).co0 $(IMAGE_PREFIX_SUBST).co0
+	$(IMGTOOL) put coco_jvc_rsdos floppy.dsk $(IMAGE_PREFIX_SUBST).co1 $(IMAGE_PREFIX_SUBST).co1
+	$(IMGTOOL) put coco_jvc_rsdos floppy.dsk $(IMAGE_PREFIX_SUBST).co2 $(IMAGE_PREFIX_SUBST).co2
+	$(IMGTOOL) put coco_jvc_rsdos floppy.dsk $(IMAGE_PREFIX_SUBST).co3 $(IMAGE_PREFIX_SUBST).co3
 	$(XROAR) -load-fd0 floppy.dsk
 
 format:
