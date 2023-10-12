@@ -4,24 +4,24 @@ Graphic experimentations on Tandy Coco 3
 # Howto
 How to display an image on a COCO3 (at least on XRoar, not tested on a real one).
 
-- first convert an image to coco format with convert (2d argument is 0 for 320x200, 1 for 640*200)
+- First convert an image to coco format with convert (2d argument is 0 for 320x200, 1 for 640*200)
 ```
 ./convert [image_filename] 0
 ```
 
-- then adapt makefile variables
+- Then adapt makefile variables
 ```
 IMAGE_PREFIX = [image_prefix]
 IMAGE_CHUNKS = [number of chunks (.co files), should be 4]
 ```
 
-- launch replaceAndRun target. It will modify _pixel.c source to load the image, 
+- Launch replaceAndRun target. It will modify _pixel.c source to load the image, 
 compile the source, create a virtual floppy with the image and launch XRoar
 ```
 make -f COCOMakefile replaceAndRun
 ```
 
-- Under XRoar, exec basic loader
+- Finally, under XRoar, exec basic loader
 ```
 RUN "P"
 ```
