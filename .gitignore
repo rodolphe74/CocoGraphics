@@ -18,3 +18,5 @@ CMakeFiles/
 CMakeCache.txt
 *.o
 *.bin
+*.co*
+*.pal
