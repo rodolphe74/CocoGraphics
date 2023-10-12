@@ -12,7 +12,7 @@ cmake .
 make
 ```
 
-- Convert an image to coco format with convert (2d argument is 0 for 320x200, 1 for 640*200)
+- Convert an image to coco format with convert (2d argument is 0 for 320x200, 1 for 640x200)
 ```
 ./convert [image_filename] 0
 ```
